@@ -7,6 +7,7 @@ import cors from "cors";
 
 // importing routes
 import userRoute from "./routes/user.js";
+import productRoute from "./routes/products.js";
 
 config({
     path: "./.env",
@@ -16,6 +17,9 @@ const port = process.env.PORT || 4040;
 const mongoURI = process.env.MONGO_URI || "";
 
 connectDB(mongoURI);
+
+
+export const myCache = new NodeCache();
 
 const app= express();
 
@@ -31,8 +35,12 @@ app.get("/", (req, res) => {
 // using Routes
 
 app.use("/api/v1/user", userRoute );
+app.use("/api/v1/product", productRoute);
 
 
+
+
+app.use("/uploads", express.static("uploads"));
 app.use(errorMiddleware);
 
 

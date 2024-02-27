@@ -21,10 +21,19 @@ This is a Server for an e-commerce application built using Node.js and MongoDB. 
 
 - **POST [/api/v1/user/new](http://localhost:8000/api/v1/user/new)**: Register a new user.
 - **GET [/api/v1/user/all]**: Get All User.
-- **GET [/api/v1/user/id]**: User Detail.
-- **DELETE [/api/v1/user/id]**: User Detail  .
+- **GET [/api/v1/user/:_id]**: User Detail.
+- **DELETE [/api/v1/user/:_id]**: Delete User Detail  .
 
+### Product 
 
+- **POST [/api/v1/product/new](http://localhost:8000/api/v1/product/new)**: To Create New Product.
+- **GET [/api/v1/product/all](http://localhost:8000/api/v1/product/all)**: To get all Products with filters.
+- **GET [/api/v1/product/latest](http://localhost:8000/api/v1/product/latest)**: To get last 10 Products.
+- **GET [/api/v1/product/categories](http://localhost:8000/api/v1/product/categories)**: To get all unique Categories.
+- **GET [/api/v1/product/admin-products](http://localhost:8000/api/v1/product/admin-products)**: To get all Products.
+- **GET [/api/v1/product/:_id](http://localhost:8000/api/v1/product/65ddf358fb1d49b9242946e5)**: To get Single Products.
+- **PUT [/api/v1/product/:_id](http://localhost:8000/api/v1/product/65ddf358fb1d49b9242946e5)**: To get Update Products.
+- **DELETE [/api/v1/product/:_id](http://localhost:8000/api/v1/product/65ddf358fb1d49b9242946e5)**: To get Delete Product Products.
 
 
 
