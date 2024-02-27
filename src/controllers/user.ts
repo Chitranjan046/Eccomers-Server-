@@ -40,3 +40,13 @@ export const newUser = TryCatch(
     });
   }
 );
+
+
+export const getAllUsers = TryCatch(async (req, res, next) => {
+  const users = await User.find({});
+
+  return res.status(200).json({
+    success: true,
+    users,
+  });
+});
