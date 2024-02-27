@@ -22,7 +22,7 @@ This is a Server for an e-commerce application built using Node.js and MongoDB. 
 - **POST [/api/v1/user/new](http://localhost:8000/api/v1/user/new)**: Register a new user.
 - **GET [/api/v1/user/all]**: Get All User.
 - **GET [/api/v1/user/id]**: User Detail.
-- **DELETE [/api/v1/user/id]**: User Detail.
+- **DELETE [/api/v1/user/id]**: User Detail  .
 
 
 
