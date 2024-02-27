@@ -10,7 +10,9 @@ export const newUser = TryCatch(
     res: Response,
     next: NextFunction
   ) => {
+    // throw new Error("ssddd");
     const { name, email, photo, gender, _id, dob } = req.body;
+  
 
     let user = await User.findById(_id);
 

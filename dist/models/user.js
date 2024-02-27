@@ -1,12 +1,6 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.User = void 0;
-const mongoose_1 = __importDefault(require("mongoose"));
-const validator_1 = __importDefault(require("validator"));
-const schema = new mongoose_1.default.Schema({
+import mongoose from "mongoose";
+import validator from "validator";
+const schema = new mongoose.Schema({
     _id: {
         type: String,
         required: [true, "Please enter ID"],
@@ -19,7 +13,7 @@ const schema = new mongoose_1.default.Schema({
         type: String,
         unique: [true, "Email already Exist"],
         required: [true, "Please enter Name"],
-        validate: validator_1.default.default.isEmail,
+        validate: validator.default.isEmail,
     },
     photo: {
         type: String,
@@ -52,4 +46,4 @@ schema.virtual("age").get(function () {
     }
     return age;
 });
-exports.User = mongoose_1.default.model("User", schema);
+export const User = mongoose.model("User", schema);

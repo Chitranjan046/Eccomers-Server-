@@ -1,18 +1,25 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
+import express from "express";
+import { connectDB } from "./utils/features.js";
+import { config } from "dotenv";
+import { errorMiddleware } from "./middlewares/error.js";
+import cors from "cors";
 // importing routes
-const user_js_1 = __importDefault(require("./routes/user.js"));
-const port = 4000;
-const app = (0, express_1.default)();
+import userRoute from "./routes/user.js";
+config({
+    path: "./.env",
+});
+const port = process.env.PORT || 4040;
+const mongoURI = process.env.MONGO_URI || "";
+connectDB(mongoURI);
+const app = express();
+app.use(express.json());
+app.use(cors());
 app.get("/", (req, res) => {
-    req.send("API Working with/ api/v1");
+    res.send("API Working with /api/v1");
 });
 // using Routes
-app.use("./api/v1/user", user_js_1.default);
+app.use("/api/v1/user", userRoute);
+app.use(errorMiddleware);
 app.listen(port, () => {
     console.log(`Server is running on:${port}`);
 });
