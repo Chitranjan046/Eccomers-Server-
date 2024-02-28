@@ -63,6 +63,7 @@ export type ShippingInfoType = {
   country: string;
   pinCode: number;
 };
+
 export interface NewOrderRequestBody {
   shippingInfo: ShippingInfoType;
   user: string;

@@ -54,6 +54,13 @@ This is a Server for an e-commerce application built using Node.js and MongoDB. 
 - **GET [/api/v1/payment/coupon/all](http://localhost:8000/api/v1/payment/596ddf358fb1sj566ssh)**: To Get All coupon.
 - **DELETE [/api/v1/payment/:id](http://localhost:8000/api/v1/payment/596ddf358fb1sj566ssh)**: To  Dlete coupon.
 
+### Dashboard
+
+- **GET [/api/v1/dashboard/stats](http://localhost:8000/api/v1/dashboard/stats)**: To Get Dashboard stats
+- **GET [/api/v1/dashboard/pie](http://localhost:8000/api/v1/dashboard/pie)**: To Get Pie Chart.
+- **GET [/api/v1/dashboard/bar](http://localhost:8000/api/v1/dashboard/bar)**: To Get Bar Chart.
+- **GET [/api/v1/dashboard/line](http://localhost:8000/api/v1/dashboard//line)**: To Get Line Chart.
+
 
 
 ## Testing
