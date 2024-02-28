@@ -36,6 +36,14 @@ This is a Server for an e-commerce application built using Node.js and MongoDB. 
 - **DELETE [/api/v1/product/:_id](http://localhost:8000/api/v1/product/65ddf358fb1d49b9242946e5)**: To get Delete Product Products.
 
 
+### Order
+
+- **POST [/api/v1/order/new](http://localhost:8000/api/v1/order/new)**: To Create New Order.
+- **GET [/api/v1/order/new](http://localhost:8000/api/v1/order/my)**: To Get my order.
+- **GET [/api/v1/order/all](http://localhost:8000/api/v1/order/all)**: To Get All order.
+- **GET [/api/v1/order/:id](http://localhost:8000/api/v1/order/596ddf358fb1d49b92466j5)**: To Get Single Order.
+- **PUT [/api/v1/order/:id](http://localhost:8000/api/v1/order/596ddf358fb1d49b92466j5)**: To Process  Order.
+- **DELETE [/api/v1/order/:id](http://localhost:8000/api/v1/order/596ddf358fb1d49b92466j5)**: To Get Dlete Order.
 
 
 
