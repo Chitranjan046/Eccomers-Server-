@@ -112,5 +112,5 @@ app.use("/uploads", express.static("uploads"));
 app.use(errorMiddleware);
 
 app.listen(port, () => {
-  console.log(`Express is working on http://localhost:${port}`);
+  // console.log(`Express is working on http://localhost:${port}`);
 });

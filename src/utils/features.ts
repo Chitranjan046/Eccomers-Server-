@@ -6,8 +6,8 @@ import { InvalidateCacheProps, OrderItemType } from "../types/types.js";
 export const connectDB = (uri: string) => {
     mongoose
       .connect(uri)
-      .then((c) => console.log(`DB Connected to ${c.connection.host}`))
-      .catch((e) => console.log(e));
+      // .then((c) => console.log(`DB Connected to ${c.connection.host}`))
+      // .catch((e) => console.log(e));
   };
 
 
